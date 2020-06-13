@@ -1,2 +1,2 @@
-Simple TicTacToe with Ncurses
+Simple Tictactoe with Ncurses
 =============================

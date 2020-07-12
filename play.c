@@ -74,18 +74,6 @@ size_t akhirPermainan(size_t matriks[3][3]){
   size_t same;
   size_t now;
 
-  //fullcheck draw
-  same = 2;
-  for(int i=0; i<3; ++i){
-    for(int j=0; j<3; ++j){
-      if(matriks[i][j]==0){
-        same = 0;
-        i=j=3;
-      }
-    }
-  }
-  if(same) return 2;
-
   //horizontal check
   for(int i=0; i<3; ++i){
     now = matriks[i][0];
@@ -122,6 +110,19 @@ size_t akhirPermainan(size_t matriks[3][3]){
     }
   }
   if(same) return 1;
+
+  //fullcheck draw
+  same = 2;
+  for(int i=0; i<3; ++i){
+    for(int j=0; j<3; ++j){
+      if(matriks[i][j]==0){
+        same = 0;
+        i=j=3;
+      }
+    }
+  }
+  if(same) return 2;
+
 
   same = 1;
   now = matriks[0][2];
